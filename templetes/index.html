@@ -3,7 +3,12 @@
 
 <form action="{% url 'minha_consulta' %}" method="post">
     {% csrf_token %}
-    {{ form }}
+    {% for field in form.visible_fields %}
+        <div class="from-group">
+            <label for="{{ field.id_for_label }}">{{field.label}}</label>
+            {{ field }}
+        </div>
+    {% endfor %}
     <input type="submit" value="OK" class="btn btn-success">
 </form>
 
