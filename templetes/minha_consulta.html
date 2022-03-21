@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-<p>Sua origem é: {{ form.origem.value }}</p>
-<p>Seu destino é: {{ form.destino.value }}</p>
-<p>Sua data de ida é: {{ form.data_ida.value }}</p>
-<p>Sua data de volta é: {{ form.data_volta.value }}</p>
-<p>Data da pesquisa: {{ form.data_pesquisa.value }}</p>
-<p>Classe de voô: {{ form.classe_viagem.value }}</p>
-<p>Informações da viagem: {{ form.informacoes.value }}</p>
-<p>E-mail: {{ form.email.value }}</p>
+<div class="from-group mt-3">
+    <p>Sua origem é: {{ form.origem.value }}</p>
+    <p>Seu destino é: {{ form.destino.value }}</p>
+    <p>Sua data de ida é: {{ form.data_ida.value }}</p>
+    <p>Sua data de volta é: {{ form.data_volta.value }}</p>
+    <p>Data da pesquisa: {{ form.data_pesquisa.value }}</p>
+    <p>Classe de voô: {{ form.classe_viagem.value }}</p>
+    <p>Informações da viagem: {{ form.informacoes.value }}</p>
+    <p>E-mail: {{ pessoa_form.email.value }}</p>
+</div>
 {% endblock %}
